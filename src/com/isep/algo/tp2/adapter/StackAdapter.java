@@ -3,22 +3,22 @@ package com.isep.algo.tp2.adapter;
 /**
  * Created by Guillaume on 01/03/2017.
  */
-public class StackAdapter extends DList implements Stack {
+public class StackAdapter<T> extends DList<T> implements Stack<T> {
 
     @Override
-    public void push(Object o) {
+    public void push(T o) {
         insertHead(o);
     }
 
     @Override
-    public Object pop() {
-        Object head = getHead();
+    public T pop() {
+        T head = getHead();
         removeHead();
         return head;
     }
 
     @Override
-    public Object top() {
+    public T top() {
         return getHead();
     }
 }
